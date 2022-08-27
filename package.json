@@ -3,9 +3,19 @@
     "version": "1.0.0",
     "description": "This program allows user to create, save and delete notes.",
     "main": "server.js",
+    "autohor": "Orsha Goines",
     "scripts": {
-        "test": "jest"
+        "test": "jest",
+        "start": "node server.js"
     },
+   
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ogoines/Professional-Note-Taker.git"
+      },
+    
+    "keywords": [],
+
     "author": "",
     "license": "ISC",
     "dependencies": {
