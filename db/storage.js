@@ -5,7 +5,7 @@ const uniqueId = require("uuid").v1;
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
-class Note {
+class Storage {
     read() {
        return readFileAsync("db/db.json", "utf8")
     }
@@ -32,4 +32,4 @@ class Note {
 
 }
 
-module.exports = new Note();
+module.exports = new Storage();
