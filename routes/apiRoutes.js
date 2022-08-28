@@ -23,4 +23,19 @@ router.post('/notes', (req,res) => {
       })
 })
 
+//deletes note with matching id
+router.delete('/notes/:id', (req,res) => {
+    const noteId = Number(req.params.id);
+    const newNotes = notes.filter((note) => note.id != noteId);
+  
+    if (!newNotes) {
+      res.status(500).send('Note not found.');
+    } else {
+      notes = newNotes;
+      res.send(notes);
+    }
+}) 
+
+
+
 module.exports = router;
