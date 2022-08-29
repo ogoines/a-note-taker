@@ -1,12 +1,12 @@
 const express = require('express');
 
 // Import modular routers for api and html routes
-const apiRouter = require('./apiRoutes');
-const htmlRouter = require('./htmlRoutes');
+const apiRoutes = require('./apiRoutes');
+const htmlRoutes = require('./htmlRoutes');
 
 const app = express();
 
-app.use('/apiRoutes', apiRouter);
-app.use('/htmlRoutes', htmlRouter);
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 module.exports = app;
