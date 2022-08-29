@@ -1,12 +1,17 @@
 const express = require('express');
-
-// Import modular routers for api and html routes
-const apiRoutes = require('./apiRoutes');
-const htmlRoutes = require('./htmlRoutes');
-
+const apiRouter = require('./routes/apiRoutes');
+const htmlRouter = require('./routes/htmlRoutes');
 const app = express();
+const PORT = process.env.PORT || 3001;
 
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
+app.use('/apiRoutes', apiRouter);
+app.use('/', htmlRouter);
+
+app.listen(PORT, () => {
+    console.log(`Now listening on PORT: ${PORT}`);
+});
 
 module.exports = app;
