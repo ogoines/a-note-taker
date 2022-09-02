@@ -1,5 +1,5 @@
 {
-    "name": "`professional-note-taker",
+    "name": "`a-professional-note-taker",
     "version": "1.0.0",
     "description": "This program allows user to create, save and delete notes.",
     "main": "server.js",

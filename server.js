@@ -47,6 +47,7 @@ app.route("/api/notes")
         }
         // This assigns an ID to the newNote. 
         newNote.id = highestId + 1;
+        console.log(newNote)
         // We push it to db.json.
         database.push(newNote)
 
@@ -61,7 +62,19 @@ app.route("/api/notes")
         // Gives back the response, which is the user's new note. 
         res.json(newNote);
     });
-
+    app.get("/api/notes/:id", function (req, res) {
+        let jsonFilePath = path.join(__dirname, "/db/db.json");
+      // request to delete note by id.
+      for (let i = 0; i < database.length; i++) {
+  
+          if (database[i].id == req.params.id) {
+              // Splice takes i position, and then deletes the 1 note.
+              res.json(database[i])
+              break;
+          }
+      }
+    })
+     
 
 // Delete a note based on an ID not in an array,
    app.delete("/api/notes/:id", function (req, res) {
