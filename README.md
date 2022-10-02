@@ -18,7 +18,7 @@ to Heroku.
 
 ## Usage
 
-[A Professional Note Taker](https://peaceful-temple-54063.herokuapp.com/)
+Can be used by visiting: https://peaceful-temple-54063.herokuapp.com/
 
 ## License
 
