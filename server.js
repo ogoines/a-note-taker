@@ -24,7 +24,7 @@ app.get("/notes", (req, res) =>
 
 
 app.route("/api/notes")
-    // Grab the notes list (this should be updated for every new note and deleted note.)
+    // Grab the notes list updates for every new note and deleted note
     .get(function (req, res) {
         res.json(database);
     })
